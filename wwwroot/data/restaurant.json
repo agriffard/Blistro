@@ -1,0 +1,33 @@
+{
+  "name": "Blistro",
+  "tagline": "A Paris corner bistro serving seasonal classics with a modern glow.",
+  "description": "Set just off the Left Bank, Blistro pairs polished French comfort food with natural wine, candlelit tables, and a welcome that lingers long after dessert.",
+  "hero": {
+    "image": "images/hero/paris-bistro.svg",
+    "alt": "A warmly lit Paris bistro dining room with marble tables and brass details"
+  },
+  "contact": {
+    "phone": "+33142689110",
+    "email": "bonjour@blistro.fr",
+    "address": "18 Rue du Bac, 75007 Paris, France"
+  },
+  "map": {
+    "lat": 48.8566,
+    "lng": 2.3332,
+    "embedUrl": "https://maps.google.com/?q=18+Rue+du+Bac,+75007+Paris"
+  },
+  "hours": [
+    { "day": "Monday", "open": "", "close": "", "closed": true },
+    { "day": "Tuesday", "open": "12:00", "close": "22:00", "closed": false },
+    { "day": "Wednesday", "open": "12:00", "close": "22:00", "closed": false },
+    { "day": "Thursday", "open": "12:00", "close": "22:30", "closed": false },
+    { "day": "Friday", "open": "12:00", "close": "23:00", "closed": false },
+    { "day": "Saturday", "open": "11:30", "close": "23:00", "closed": false },
+    { "day": "Sunday", "open": "11:30", "close": "21:30", "closed": false }
+  ],
+  "social": [
+    { "label": "Instagram", "url": "https://instagram.com/blistroparis" },
+    { "label": "Facebook", "url": "https://facebook.com/blistroparis" },
+    { "label": "TikTok", "url": "https://tiktok.com/@blistroparis" }
+  ]
+}
