@@ -1,14 +1,14 @@
 :root {
-    --color-background: #f7f0e8;
-    --color-surface: #fffaf4;
-    --color-surface-strong: #f0e2d1;
-    --color-text: #2c1f1a;
-    --color-muted: #6d5a4d;
-    --color-accent: #9e4f2e;
-    --color-accent-dark: #7f3e22;
-    --color-border: rgba(44, 31, 26, 0.12);
-    --color-shadow: rgba(44, 31, 26, 0.08);
-    --max-width: 72rem;
+    --color-background: #ffffff;
+    --color-surface: #ffffff;
+    --color-surface-strong: #f4f4f4;
+    --color-text: #111111;
+    --color-muted: #6b6b6b;
+    --color-accent: #ff3b1d;
+    --color-accent-dark: #d62c12;
+    --color-border: #e6e6e6;
+    --color-shadow: rgba(17, 17, 17, 0.06);
+    --max-width: 75rem;
 }
 
 html {
@@ -26,8 +26,9 @@ body, h1, h2, h3, p, ul, ol, figure {
 body {
     background: var(--color-background);
     color: var(--color-text);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -52,21 +53,22 @@ main {
 .container {
     margin: 0 auto;
     max-width: var(--max-width);
-    padding: 0 1.25rem;
+    padding: 0 2rem;
 }
 
 .section {
-    padding: 4.5rem 0;
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
 }
 
 .section-copy {
     display: grid;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .site-nav {
-    background: rgba(247, 240, 232, 0.94);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--color-border);
     position: sticky;
     top: 0;
@@ -82,15 +84,15 @@ main {
 }
 
 .brand {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
 }
 
 .nav-toggle {
     background: transparent;
     border: 1px solid var(--color-border);
-    border-radius: 999px;
     display: inline-flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -99,7 +101,6 @@ main {
 
 .nav-toggle span {
     background: currentColor;
-    border-radius: 999px;
     display: block;
     height: 2px;
     width: 1.1rem;
@@ -108,15 +109,13 @@ main {
 .nav-links {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
-    border-radius: 1rem;
-    box-shadow: 0 1rem 2rem var(--color-shadow);
     display: none;
     flex-direction: column;
-    left: 1.25rem;
-    padding: 0.75rem;
+    left: 2rem;
+    padding: 0.5rem;
     position: absolute;
-    right: 1.25rem;
-    top: calc(100% - 0.5rem);
+    right: 2rem;
+    top: calc(100% + 1px);
 }
 
 .nav-links.open {
@@ -124,37 +123,44 @@ main {
 }
 
 .nav-links a {
-    border-radius: 0.75rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     padding: 0.75rem 1rem;
+    text-transform: uppercase;
 }
 
 .nav-links a:hover,
 .nav-links a:focus-visible,
-.cta:hover,
-.cta:focus-visible,
 .social-links a:hover,
 .social-links a:focus-visible {
+    color: var(--color-accent);
     background: var(--color-surface-strong);
     outline: none;
 }
 
+.cta:hover,
+.cta:focus-visible {
+    outline: none;
+}
+
 .hero-section {
-    padding-top: 3rem;
+    padding-top: 5rem;
+    border-top: 0;
 }
 
 .hero-layout,
 .about-layout,
 .contact-layout {
     display: grid;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .eyebrow {
     color: var(--color-accent);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
 }
 
@@ -164,13 +170,18 @@ main {
 .contact-panel h2,
 .hours-panel h2,
 .not-found h1 {
-    font-family: Georgia, 'Times New Roman', serif;
-    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 
 .hero-copy h1 {
-    font-size: clamp(2.8rem, 8vw, 5rem);
-    margin-top: 0.75rem;
+    font-size: clamp(3rem, 9vw, 6rem);
+    margin-top: 1rem;
 }
 
 .hero-copy .lead,
@@ -183,64 +194,90 @@ address {
     color: var(--color-muted);
 }
 
+.hero-copy .lead {
+    font-size: 1.15rem;
+    margin-top: 1.5rem;
+    max-width: 34rem;
+}
+
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1.75rem;
+    gap: 1rem;
+    margin-top: 2.5rem;
 }
 
 .cta {
     background: var(--color-text);
-    border-radius: 999px;
-    color: #fffaf4;
+    color: #ffffff;
     display: inline-flex;
+    font-size: 0.9rem;
     font-weight: 600;
-    padding: 0.9rem 1.35rem;
+    letter-spacing: 0.03em;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+    background: var(--color-accent);
 }
 
 .cta.secondary {
-    background: var(--color-accent);
+    background: transparent;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+}
+
+.cta.secondary:hover,
+.cta.secondary:focus-visible {
+    background: var(--color-text);
+    color: #ffffff;
 }
 
 .hero-media img,
 .about-media img {
-    border-radius: 1.5rem;
-    box-shadow: 0 1.2rem 2.4rem var(--color-shadow);
     object-fit: cover;
     width: 100%;
 }
 
 .menu-grid {
     display: grid;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-border);
 }
 
 .menu-category,
 .contact-panel,
 .hours-panel {
     background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 1.5rem;
-    box-shadow: 0 1rem 2rem var(--color-shadow);
-    padding: 1.5rem;
+    padding: 2rem 0;
+}
+
+.menu-category {
+    border-bottom: 1px solid var(--color-border);
 }
 
 .menu-category h3 {
-    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.75rem;
+    text-transform: uppercase;
 }
 
 .menu-items {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .menu-item {
-    border-top: 1px solid var(--color-border);
     display: grid;
     gap: 1rem;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
 }
 
 .menu-item:first-child {
@@ -255,9 +292,12 @@ address {
     justify-content: space-between;
 }
 
+.menu-item header h4 {
+    font-weight: 700;
+}
+
 .menu-item-image {
     aspect-ratio: 4 / 3;
-    border-radius: 1rem;
     object-fit: cover;
     width: 100%;
 }
@@ -270,44 +310,55 @@ address {
 }
 
 .badge {
-    background: var(--color-surface-strong);
-    border-radius: 999px;
-    color: var(--color-text);
-    font-size: 0.85rem;
-    padding: 0.35rem 0.75rem;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    padding: 0.3rem 0.7rem;
+    text-transform: uppercase;
 }
 
 .badge.allergen {
-    background: rgba(158, 79, 46, 0.15);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
 }
 
 .gallery-grid {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    margin-top: 2rem;
+    gap: 1px;
+    background: var(--color-border);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    margin-top: 3rem;
+    border: 1px solid var(--color-border);
 }
 
 .gallery-card {
     background: var(--color-surface);
-    border-radius: 1.25rem;
     overflow: hidden;
-    box-shadow: 0 1rem 2rem var(--color-shadow);
 }
 
 .gallery-card img {
     aspect-ratio: 4 / 3;
     object-fit: cover;
     width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.04);
 }
 
 .gallery-card figcaption {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
     padding: 1rem;
+    text-transform: uppercase;
 }
 
 .about-copy {
     display: grid;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .about-copy p {
@@ -320,7 +371,7 @@ address {
 
 .contact-panel {
     display: grid;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 address {
@@ -339,7 +390,7 @@ address {
 .hours-table th,
 .hours-table td {
     border-bottom: 1px solid var(--color-border);
-    padding: 0.65rem 0;
+    padding: 0.75rem 0;
     text-align: left;
 }
 
@@ -357,15 +408,18 @@ address {
 }
 
 .social-links a {
-    background: var(--color-surface-strong);
-    border-radius: 999px;
+    background: transparent;
+    border: 1px solid var(--color-border);
     display: inline-flex;
-    padding: 0.6rem 0.95rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    padding: 0.6rem 1rem;
+    text-transform: uppercase;
 }
 
 .loading-section,
 .boot-loading {
-    padding: 4.5rem 1.25rem;
+    padding: 6rem 2rem;
 }
 
 .loading-grid {
@@ -375,9 +429,8 @@ address {
 
 .loading-skeleton {
     animation: shimmer 1.4s infinite linear;
-    background: linear-gradient(90deg, rgba(240, 226, 209, 0.5) 25%, rgba(255, 250, 244, 0.95) 50%, rgba(240, 226, 209, 0.5) 75%);
+    background: linear-gradient(90deg, #f4f4f4 25%, #ffffff 50%, #f4f4f4 75%);
     background-size: 200% 100%;
-    border-radius: 1rem;
 }
 
 .loading-heading {
@@ -441,10 +494,9 @@ address {
     .nav-links {
         background: transparent;
         border: 0;
-        border-radius: 0;
-        box-shadow: none;
         display: flex;
         flex-direction: row;
+        gap: 0.5rem;
         padding: 0;
         position: static;
     }
@@ -457,6 +509,12 @@ address {
 
     .menu-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .menu-category {
+        padding: 2rem;
+        border-bottom: 0;
+        border-right: 1px solid var(--color-border);
     }
 
     .menu-item {
