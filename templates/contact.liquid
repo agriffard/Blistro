@@ -1,0 +1,37 @@
+<section id="contact" class="section">
+  <div class="container contact-layout">
+    <section class="contact-panel">
+      <p class="eyebrow">Contact</p>
+      <h2>Visit Blistro</h2>
+      <address>{{ Contact.Address }}</address>
+      <p><a href="tel:{{ Contact.Phone }}">{{ Contact.Phone }}</a></p>
+      <p><a href="mailto:{{ Contact.Email }}">{{ Contact.Email }}</a></p>
+      <p><a class="cta secondary" href="{{ Map.EmbedUrl }}" target="_blank" rel="noreferrer">Open map</a></p>
+      <ul class="social-links">
+        {% for link in Social %}
+        <li><a href="{{ link.Url }}" target="_blank" rel="noreferrer">{{ link.Label }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section class="hours-panel">
+      <p class="eyebrow">Hours</p>
+      <h2>Plan your table</h2>
+      <div class="hours-table">
+        <table>
+          <tbody>
+            {% for entry in Hours %}
+            <tr>
+              <th scope="row">{{ entry.Day }}</th>
+              {% if entry.Closed %}
+              <td>Closed</td>
+              {% else %}
+              <td>{{ entry.Open }} – {{ entry.Close }}</td>
+              {% endif %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+{
+  "images": [
+    { "src": "images/gallery/terrace.svg", "caption": "Golden hour on the terrace.", "alt": "Outdoor bistro terrace at sunset" },
+    { "src": "images/gallery/cocktails.svg", "caption": "Aperitif hour with house cocktails.", "alt": "Two cocktails served on a marble bar" },
+    { "src": "images/gallery/steak.svg", "caption": "Our signature steak frites service.", "alt": "Steak frites plated with herbs and fries" },
+    { "src": "images/gallery/dining-room.svg", "caption": "Intimate tables for long dinners.", "alt": "Bistro dining room with candlelit tables" },
+    { "src": "images/gallery/dessert.svg", "caption": "Desserts worth staying late for.", "alt": "Caramelized creme brulee on a dessert plate" },
+    { "src": "images/gallery/wine.svg", "caption": "Natural wines poured nightly.", "alt": "Wine bottles and glasses ready for service" }
+  ]
+}

@@ -1,0 +1,469 @@
+:root {
+    --color-background: #f7f0e8;
+    --color-surface: #fffaf4;
+    --color-surface-strong: #f0e2d1;
+    --color-text: #2c1f1a;
+    --color-muted: #6d5a4d;
+    --color-accent: #9e4f2e;
+    --color-accent-dark: #7f3e22;
+    --color-border: rgba(44, 31, 26, 0.12);
+    --color-shadow: rgba(44, 31, 26, 0.08);
+    --max-width: 72rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, p, ul, ol, figure {
+    margin: 0;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    color: inherit;
+    font: inherit;
+}
+
+main {
+    display: block;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: 0 1.25rem;
+}
+
+.section {
+    padding: 4.5rem 0;
+}
+
+.section-copy {
+    display: grid;
+    gap: 1rem;
+}
+
+.site-nav {
+    background: rgba(247, 240, 232, 0.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.nav-shell {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    min-height: 4.5rem;
+}
+
+.brand {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.nav-toggle {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem;
+}
+
+.nav-toggle span {
+    background: currentColor;
+    border-radius: 999px;
+    display: block;
+    height: 2px;
+    width: 1.1rem;
+}
+
+.nav-links {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem var(--color-shadow);
+    display: none;
+    flex-direction: column;
+    left: 1.25rem;
+    padding: 0.75rem;
+    position: absolute;
+    right: 1.25rem;
+    top: calc(100% - 0.5rem);
+}
+
+.nav-links.open {
+    display: flex;
+}
+
+.nav-links a {
+    border-radius: 0.75rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.cta:hover,
+.cta:focus-visible,
+.social-links a:hover,
+.social-links a:focus-visible {
+    background: var(--color-surface-strong);
+    outline: none;
+}
+
+.hero-section {
+    padding-top: 3rem;
+}
+
+.hero-layout,
+.about-layout,
+.contact-layout {
+    display: grid;
+    gap: 2rem;
+}
+
+.eyebrow {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.hero-copy h1,
+.section-title,
+.about-copy h2,
+.contact-panel h2,
+.hours-panel h2,
+.not-found h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.1;
+}
+
+.hero-copy h1 {
+    font-size: clamp(2.8rem, 8vw, 5rem);
+    margin-top: 0.75rem;
+}
+
+.hero-copy .lead,
+.about-copy p,
+.contact-panel p,
+.menu-item p,
+.gallery-card figcaption,
+.hours-table,
+address {
+    color: var(--color-muted);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+}
+
+.cta {
+    background: var(--color-text);
+    border-radius: 999px;
+    color: #fffaf4;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.9rem 1.35rem;
+}
+
+.cta.secondary {
+    background: var(--color-accent);
+}
+
+.hero-media img,
+.about-media img {
+    border-radius: 1.5rem;
+    box-shadow: 0 1.2rem 2.4rem var(--color-shadow);
+    object-fit: cover;
+    width: 100%;
+}
+
+.menu-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.menu-category,
+.contact-panel,
+.hours-panel {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 2rem var(--color-shadow);
+    padding: 1.5rem;
+}
+
+.menu-category h3 {
+    margin-bottom: 1.25rem;
+}
+
+.menu-items {
+    display: grid;
+    gap: 1rem;
+}
+
+.menu-item {
+    border-top: 1px solid var(--color-border);
+    display: grid;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.menu-item:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.menu-item header {
+    align-items: baseline;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.menu-item-image {
+    aspect-ratio: 4 / 3;
+    border-radius: 1rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.badge {
+    background: var(--color-surface-strong);
+    border-radius: 999px;
+    color: var(--color-text);
+    font-size: 0.85rem;
+    padding: 0.35rem 0.75rem;
+}
+
+.badge.allergen {
+    background: rgba(158, 79, 46, 0.15);
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-top: 2rem;
+}
+
+.gallery-card {
+    background: var(--color-surface);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem var(--color-shadow);
+}
+
+.gallery-card img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    width: 100%;
+}
+
+.gallery-card figcaption {
+    padding: 1rem;
+}
+
+.about-copy {
+    display: grid;
+    gap: 1rem;
+}
+
+.about-copy p {
+    white-space: pre-line;
+}
+
+.contact-layout {
+    align-items: start;
+}
+
+.contact-panel {
+    display: grid;
+    gap: 1rem;
+}
+
+address {
+    font-style: normal;
+}
+
+.hours-table {
+    width: 100%;
+}
+
+.hours-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.hours-table th,
+.hours-table td {
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.65rem 0;
+    text-align: left;
+}
+
+.hours-table tr:last-child th,
+.hours-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+}
+
+.social-links a {
+    background: var(--color-surface-strong);
+    border-radius: 999px;
+    display: inline-flex;
+    padding: 0.6rem 0.95rem;
+}
+
+.loading-section,
+.boot-loading {
+    padding: 4.5rem 1.25rem;
+}
+
+.loading-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.loading-skeleton {
+    animation: shimmer 1.4s infinite linear;
+    background: linear-gradient(90deg, rgba(240, 226, 209, 0.5) 25%, rgba(255, 250, 244, 0.95) 50%, rgba(240, 226, 209, 0.5) 75%);
+    background-size: 200% 100%;
+    border-radius: 1rem;
+}
+
+.loading-heading {
+    height: 2.75rem;
+    max-width: 18rem;
+}
+
+.loading-copy {
+    height: 1rem;
+    margin-top: 1rem;
+    max-width: 40rem;
+}
+
+.loading-copy.short {
+    max-width: 24rem;
+}
+
+.loading-card {
+    height: 12rem;
+    margin-top: 1rem;
+}
+
+.loading-tile {
+    height: 12rem;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        position: static;
+    }
+
+    .hero-layout,
+    .about-layout,
+    .contact-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .menu-item {
+        grid-template-columns: 7rem minmax(0, 1fr);
+    }
+
+    .loading-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
