@@ -1,0 +1,16 @@
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section-copy">
+      <p class="eyebrow">Gallery</p>
+      <h2 class="section-title">A glimpse of dinner, dessert, and the room in motion.</h2>
+    </div>
+    <div class="gallery-grid">
+      {% for image in Images %}
+      <figure class="gallery-card">
+        <img src="{{ image.Src }}" alt="{{ image.Alt }}" loading="lazy" />
+        <figcaption>{{ image.Caption }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>

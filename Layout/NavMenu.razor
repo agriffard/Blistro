@@ -1,0 +1,31 @@
+<nav class="site-nav">
+    <div class="container nav-shell">
+        <a class="brand" href="#hero" @onclick="CloseMenu">Blistro</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="@_isOpen" @onclick="ToggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links @(_isOpen ? "open" : null)">
+            <a href="#hero" @onclick="CloseMenu">Hero</a>
+            <a href="#menu" @onclick="CloseMenu">Menu</a>
+            <a href="#gallery" @onclick="CloseMenu">Gallery</a>
+            <a href="#about" @onclick="CloseMenu">About</a>
+            <a href="#contact" @onclick="CloseMenu">Contact</a>
+        </div>
+    </div>
+</nav>
+
+@code {
+    private bool _isOpen;
+
+    private void ToggleMenu()
+    {
+        _isOpen = !_isOpen;
+    }
+
+    private void CloseMenu()
+    {
+        _isOpen = false;
+    }
+}

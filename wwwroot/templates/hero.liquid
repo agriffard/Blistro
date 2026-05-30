@@ -1,0 +1,17 @@
+<section id="hero" class="section hero-section">
+  <div class="container hero-layout">
+    <div class="hero-copy">
+      <p class="eyebrow">Paris Bistro</p>
+      <h1>{{ Name }}</h1>
+      <p class="lead">{{ Tagline }}</p>
+      <p>{{ Description }}</p>
+      <div class="hero-actions">
+        <a class="cta" href="tel:{{ Contact.Phone }}">Call {{ Contact.Phone }}</a>
+        <a class="cta secondary" href="https://www.google.com/maps?q={{ Map.Lat }},{{ Map.Lng }}" target="_blank" rel="noreferrer">Get directions</a>
+      </div>
+    </div>
+    <figure class="hero-media">
+      <img src="{{ Hero.Image }}" alt="{{ Hero.Alt }}" />
+    </figure>
+  </div>
+</section>

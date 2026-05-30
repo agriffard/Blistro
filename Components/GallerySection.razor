@@ -1,0 +1,28 @@
+@inject ContentService ContentService
+
+@if (_html is null)
+{
+    <section id="gallery" class="section loading-section">
+        <div class="container">
+            <div class="loading-skeleton loading-heading"></div>
+            <div class="loading-grid">
+                <div class="loading-skeleton loading-tile"></div>
+                <div class="loading-skeleton loading-tile"></div>
+                <div class="loading-skeleton loading-tile"></div>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    @((MarkupString)_html)
+}
+
+@code {
+    private string? _html;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _html = await ContentService.RenderSectionAsync<GalleryModel>("data/gallery.json", "templates/gallery.liquid");
+    }
+}

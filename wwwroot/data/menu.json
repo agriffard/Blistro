@@ -1,0 +1,95 @@
+{
+  "currency": "€",
+  "categories": [
+    {
+      "id": "entrees",
+      "name": "Entrées",
+      "items": [
+        {
+          "name": "Soupe à l’oignon gratinée",
+          "description": "Slow-cooked onion broth with toasted levain and bubbling Comté.",
+          "price": 11,
+          "image": "images/menu/soupe-oignon.svg",
+          "tags": ["Classic", "Vegetarian"],
+          "allergens": ["Dairy", "Gluten"]
+        },
+        {
+          "name": "Tartare de betterave",
+          "description": "Roasted beet tartare with capers, shallot, mustard, and herb salad.",
+          "price": 12,
+          "image": "images/menu/beet-tartare.svg",
+          "tags": ["Seasonal", "Vegetarian"],
+          "allergens": ["Mustard"]
+        },
+        {
+          "name": "Gougères au fromage",
+          "description": "Warm choux puffs with aged Gruyère and cracked black pepper.",
+          "price": 9,
+          "image": "images/menu/gougeres.svg",
+          "tags": ["To Share"],
+          "allergens": ["Dairy", "Eggs", "Gluten"]
+        }
+      ]
+    },
+    {
+      "id": "plats",
+      "name": "Plats",
+      "items": [
+        {
+          "name": "Steak frites",
+          "description": "Seared bavette, maître d’hôtel butter, and hand-cut fries.",
+          "price": 28,
+          "image": "images/menu/steak-frites.svg",
+          "tags": ["Signature"],
+          "allergens": ["Dairy"]
+        },
+        {
+          "name": "Saumon en croûte d’herbes",
+          "description": "Roasted salmon with green lentils, fennel, and lemon beurre blanc.",
+          "price": 26,
+          "image": "images/menu/salmon.svg",
+          "tags": ["House Favorite"],
+          "allergens": ["Fish", "Dairy"]
+        },
+        {
+          "name": "Risotto aux champignons",
+          "description": "Creamy carnaroli rice with wild mushrooms, thyme, and parmesan.",
+          "price": 22,
+          "image": "images/menu/risotto.svg",
+          "tags": ["Vegetarian", "Comfort"],
+          "allergens": ["Dairy"]
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "items": [
+        {
+          "name": "Crème brûlée vanille",
+          "description": "Silky custard with a glassy caramel shell and vanilla bean.",
+          "price": 10,
+          "image": "images/menu/creme-brulee.svg",
+          "tags": ["Classic"],
+          "allergens": ["Dairy", "Eggs"]
+        },
+        {
+          "name": "Mousse au chocolat",
+          "description": "Dark chocolate mousse with fleur de sel and whipped cream.",
+          "price": 9,
+          "image": "images/menu/chocolate-mousse.svg",
+          "tags": ["Rich"],
+          "allergens": ["Dairy", "Eggs"]
+        },
+        {
+          "name": "Tarte fine aux pommes",
+          "description": "Thin apple tart with cultured cream and Calvados caramel.",
+          "price": 11,
+          "image": "images/menu/apple-tart.svg",
+          "tags": ["Seasonal"],
+          "allergens": ["Dairy", "Gluten"]
+        }
+      ]
+    }
+  ]
+}

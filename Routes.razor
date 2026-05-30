@@ -1,0 +1,17 @@
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <PageTitle>Page not found</PageTitle>
+            <section class="section not-found">
+                <div class="container section-copy">
+                    <h1>Page not found</h1>
+                    <p>The page you requested could not be found. Head back to the homepage to explore Blistro.</p>
+                </div>
+            </section>
+        </LayoutView>
+    </NotFound>
+</Router>

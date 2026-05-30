@@ -1,0 +1,25 @@
+@inject ContentService ContentService
+
+@if (_html is null)
+{
+    <section id="about" class="section loading-section">
+        <div class="container">
+            <div class="loading-skeleton loading-heading"></div>
+            <div class="loading-skeleton loading-copy"></div>
+            <div class="loading-skeleton loading-copy"></div>
+        </div>
+    </section>
+}
+else
+{
+    @((MarkupString)_html)
+}
+
+@code {
+    private string? _html;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _html = await ContentService.RenderSectionAsync<AboutModel>("data/about.json", "templates/about.liquid");
+    }
+}

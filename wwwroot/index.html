@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blistro</title>
+    <meta name="description" content="Blistro is a Paris-inspired neighborhood bistro serving seasonal French plates, natural wine, and warm hospitality." />
+    <meta property="og:title" content="Blistro" />
+    <meta property="og:description" content="A static Paris bistro website built with Blazor WebAssembly." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/hero/paris-bistro.svg" />
+    <base href="/" />
+    <link rel="preload" id="webassembly" />
+    <link rel="stylesheet" href="css/app.css" />
+    <script type="importmap"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="boot-loading">
+            <div class="loading-skeleton loading-heading"></div>
+            <div class="loading-skeleton loading-copy"></div>
+            <div class="loading-skeleton loading-copy short"></div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+    <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
+</body>
+
+</html>

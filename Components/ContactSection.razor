@@ -1,0 +1,24 @@
+@inject ContentService ContentService
+
+@if (_html is null)
+{
+    <section id="contact" class="section loading-section">
+        <div class="container">
+            <div class="loading-skeleton loading-heading"></div>
+            <div class="loading-skeleton loading-card"></div>
+        </div>
+    </section>
+}
+else
+{
+    @((MarkupString)_html)
+}
+
+@code {
+    private string? _html;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _html = await ContentService.RenderSectionAsync<RestaurantModel>("data/restaurant.json", "templates/contact.liquid");
+    }
+}
